@@ -63,8 +63,6 @@ DOCS="CHANGES NEWS AUTHORS README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-init.patch
-	# Fix urwid calls
-	epatch "${FILESDIR}/${P}"-urwid-1.0.patch
 	epatch "${FILESDIR}"/${PN}-init-sve-start.patch
 	# Fix ad-hoc networking (bug 351337)
 	epatch "${FILESDIR}"/fix-ad-hoc-networking.patch
