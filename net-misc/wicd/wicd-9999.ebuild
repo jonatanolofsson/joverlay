@@ -64,8 +64,6 @@ DOCS="CHANGES NEWS AUTHORS README"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-init.patch
 	epatch "${FILESDIR}"/${PN}-init-sve-start.patch
-	# Fix ad-hoc networking (bug 351337)
-	epatch "${FILESDIR}"/fix-ad-hoc-networking.patch
 	# Add a template for hex psk's and wpa (Bug 306423)
 	epatch "${FILESDIR}"/add-wpa-psk-hex-template.patch
 	# get rid of opts variable to fix bug 381885
