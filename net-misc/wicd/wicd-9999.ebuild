@@ -66,6 +66,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-init-sve-start.patch
 	# Add a template for hex psk's and wpa (Bug 306423)
 	epatch "${FILESDIR}"/add-wpa-psk-hex-template.patch
+	epatch "${FILESDIR}"/wicd-wireless-status.patch
 	# get rid of opts variable to fix bug 381885
 	sed -i "/opts/d" "in/init=gentoo=wicd.in"
 	# Need to ensure that generated scripts use Python 2 at run time.

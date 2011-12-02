@@ -1,0 +1,13 @@
+=== modified file 'gtk/gui.py'
+--- gtk/gui.py	2011-11-14 08:29:45 +0000
++++ gtk/gui.py	2011-12-02 12:50:11 +0000
+@@ -469,7 +469,7 @@
+         if info[0] == "wireless":
+             stat = wireless.CheckWirelessConnectingMessage()
+             gobject.idle_add(self.set_status, "%s: %s" % \
+-                (wireless.GetCurrentNetwork(), stat))
++                (wireless.GetCurrentNetwork(''), stat))
+         elif info[0] == "wired":
+             gobject.idle_add(self.set_status, _('Wired Network') + ': ' \
+                 + wired.CheckWiredConnectingMessage())
+
