@@ -72,6 +72,7 @@ src_prepare() {
     # Need to ensure that generated scripts use Python 2 at run time.
     sed -e "s:self.python = '/usr/bin/python':self.python = '/usr/bin/python2':" \
       -i setup.py || die "sed failed"
+    rm po/ast.po
     python_copy_sources
 }
 
