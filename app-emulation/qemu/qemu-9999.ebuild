@@ -209,7 +209,7 @@ src_configure() {
 		--disable-kvm \
 		--disable-libiscsi \
 		--enable-nptl \
-		--enable-uuid \
+		--disable-uuid \
 		${conf_opts} \
 		--audio-card-list="ac97 es1370 sb16 cs4231a adlib gus hda" \
 		--audio-drv-list="${audio_opts}" \
