@@ -37,4 +37,6 @@ src_configure() {
     eqmake4 ${S}/equalx.pro
 }
 
-
+src_install() {
+	dobin ${PN}
+}
